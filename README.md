@@ -1,5 +1,7 @@
 # -1
-## 1. Key Generation Diagram  ## 2. Signer Class Diagram  flowchart TD
+## 1. Key Generation Diagram  ## 2. Signer Class Diagram  ## 3. Verifier Flowchart
+```mermaid
+flowchart TD
     %% Styles
     classDef startEnd fill:#D1FFD6,stroke:#2ECC71,stroke-width:2px,rx:15,ry:15;
     classDef process fill:#E9F3FF,stroke:#4A90E2,stroke-width:2px,rx:10,ry:10;
@@ -16,7 +18,7 @@
     E -->|Noto‘g‘ri| G["❌ Imzo noto‘g‘ri! (INVALID)"]:::process
     F --> H((Tugash)):::startEnd
     G --> H
-
+```
 
 ```mermaid
 classDiagram
