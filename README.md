@@ -9,5 +9,5 @@ flowchart TD
     F --> G["Public keyni PEM formatga o'girish"]
     G --> H>public_key.pem fayliga yozish]
     H --> I["Chop etish: 'Kalitlar yaratildi!'"]
-    I --> J((Tugash)) ```
+    I --> J((Tugash)) 
 
