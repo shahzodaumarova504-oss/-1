@@ -1,5 +1,22 @@
 # -1
-## 1. Key Generation Diagram  ## 2. Signer Class Diagram
+## 1. Key Generation Diagram  ## 2. Signer Class Diagram  flowchart TD
+    %% Styles
+    classDef startEnd fill:#D1FFD6,stroke:#2ECC71,stroke-width:2px,rx:15,ry:15;
+    classDef process fill:#E9F3FF,stroke:#4A90E2,stroke-width:2px,rx:10,ry:10;
+    classDef io fill:#FFF4D6,stroke:#F5A623,stroke-width:2px,rx:10,ry:10;
+    classDef decision fill:#FFE4E1,stroke:#FF6347,stroke-width:2px,rx:10,ry:10;
+
+    %% Blocks
+    A((Boshlash)):::startEnd --> 
+    B["Yuklash: public_key.pem"]:::io -->
+    C["Yuklash: signature.sig"]:::io -->
+    D["Data objectni JSON formatga o‘tkazish"]:::process -->
+    E{"Imzo tekshiriladi?"}:::decision
+    E -->|To‘g‘ri| F["✔ Imzo to‘g‘ri! (VALID)"]:::process
+    E -->|Noto‘g‘ri| G["❌ Imzo noto‘g‘ri! (INVALID)"]:::process
+    F --> H((Tugash)):::startEnd
+    G --> H
+
 
 ```mermaid
 classDiagram
